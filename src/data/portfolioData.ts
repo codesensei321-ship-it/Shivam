@@ -1,5 +1,20 @@
 import { StatMetric, ServiceDetail, CaseStudy, FaqItem, Testimonial, LaunchReadinessQuestion } from '../types';
 
+export const CONTACT_INFO = {
+  name: 'Shivam Kushwaha',
+  role: 'Founder — AxentAI Labs',
+  company: 'AxentAI Labs',
+  phone: '+91 91111 83136',
+  email: 'shivamkushwaha5201@gmail.com',
+  calendlyUrl: 'https://calendly.com/shivamkushwaha5201/30min',
+  whatsappUrl: 'https://wa.me/919111183136',
+  whatsapp: 'https://wa.me/919111183136',
+  personalLinkedIn: 'https://www.linkedin.com/in/shivam-k-6a462337',
+  companyLinkedIn: 'https://www.linkedin.com/company/axentailabs/',
+  xTwitter: 'https://x.com',
+  location: 'Global / Remote'
+};
+
 export const STAT_METRICS: StatMetric[] = [
   {
     id: 'ph-launches',
@@ -13,7 +28,7 @@ export const STAT_METRICS: StatMetric[] = [
     id: 'impressions',
     value: '68M+',
     label: 'Total Organic Impressions Generated',
-    subtext: 'Across high-converting X (Twitter) & LinkedIn campaigns',
+    subtext: 'Across high-converting LinkedIn, X & Reddit campaigns',
     iconName: 'TrendingUp',
     growth: '100% Organic'
   },
@@ -29,7 +44,7 @@ export const STAT_METRICS: StatMetric[] = [
     id: 'pipeline-value',
     value: '$5.4M+',
     label: 'Tracked Pipeline & GMV for Founders',
-    subtext: 'Immediate MRR spike and seed investor inbound generated',
+    subtext: 'Immediate MRR spikes and seed investor inbounds generated',
     iconName: 'Zap',
     growth: 'Verified ROI'
   }
@@ -37,73 +52,137 @@ export const STAT_METRICS: StatMetric[] = [
 
 export const SERVICES_DATA: ServiceDetail[] = [
   {
-    id: 'product-hunt-hunting',
-    title: 'Product Hunt Launch Architecture & Hunting',
-    tagline: 'Get hunted by an Elite Top 1% Hunter and dominate the #1 spot on launch day.',
-    icon: 'Trophy',
-    badge: 'Flagship Service',
-    description: 'Launching on Product Hunt is no longer about just hitting "submit". It requires a surgical 4-week warm-up, bespoke asset crafting, first-comment masterclasses, and an international timezone upvote momentum strategy.',
+    id: 'product-hunt-launch',
+    title: 'Product Hunt Launch Support',
+    tagline: 'End-to-end launch strategy, positioning & war room support for #1 leaderboard dominance.',
+    icon: 'Rocket',
+    badge: 'Flagship Launch',
+    description: 'Complete end-to-end launch engineering on Product Hunt. From pre-launch teaser optimization to 24-hour launch day war room monitoring and community momentum.',
     deliverables: [
-      'Personal Hunter Endorsement & Official Hunt Submission',
-      'High-converting GIF gallery, thumbnail, & maker comment copy',
-      'Teaser page optimization to collect 500+ pre-launch subscribers',
-      '24-hour Launch Day War Room monitoring & leaderboard strategy',
-      'Algorithm safe-guarding (avoiding shadowbans and suspicious spikes)'
+      'Product Hunt launch strategy',
+      'Launch preparation & positioning',
+      'Launch-day support',
+      'Community engagement',
+      'Product promotion',
+      'Post-launch visibility'
     ],
-    resultsMetric: 'Average 850+ upvotes & Top 3 Badge',
-    idealFor: 'AI tools, SaaS products, Dev tools & Mobile apps aiming for immediate viral influx.',
+    resultsMetric: 'Average 850+ upvotes & #1 Leaderboard Badge',
+    idealFor: 'AI tools, SaaS startups, DevTools, and Mobile apps ready for massive viral exposure.',
     featured: true
   },
   {
-    id: 'x-linkedin-smm',
-    title: 'X & LinkedIn Growth & Ghostwriting',
-    tagline: 'Transform founder personal accounts into unstoppable organic distribution engines.',
-    icon: 'Sparkles',
-    badge: 'High Inbound',
-    description: 'People buy from founders, not faceless corporate logos. I build your founder voice on X and LinkedIn through viral storytelling, high-retention carousels, build-in-public breakdowns, and calculated engagement loops.',
+    id: 'linkedin-smm',
+    title: 'LinkedIn Social Media Management',
+    tagline: 'Transform company & founder profiles into high-converting B2B inbound engines.',
+    icon: 'Share2',
+    badge: 'B2B Growth',
+    description: 'Comprehensive LinkedIn organic growth and thought leadership execution. We craft high-retention carousels, founder breakdowns, and engagement strategies that build authority.',
     deliverables: [
-      '12-16 high-converting monthly posts / threads / LinkedIn carousels',
-      'Visual asset & screenshot mockup design optimized for feeds',
-      'Daily 45-minute strategic founder engagement in relevant niche circles',
-      'Narrative positioning that converts followers into paying customers & beta users',
-      'Monthly analytics review & viral format iterations'
+      'Content strategy',
+      'Post creation',
+      'Founder/company positioning',
+      'Engagement & comment strategy',
+      'Audience growth',
+      'Consistent content management'
     ],
-    resultsMetric: '500k-2.5M impressions / month average',
-    idealFor: 'Tech founders, venture-backed CEOs, and solo creators building in public.'
+    resultsMetric: '300k - 1.2M monthly impressions & targeted lead flow',
+    idealFor: 'B2B SaaS, tech founders, consultants, and scale-ups wanting direct pipeline.',
+    featured: true
+  },
+  {
+    id: 'x-twitter-smm',
+    title: 'X (Twitter) Social Media Management',
+    tagline: 'Daily high-impact posts, viral threads, and tech community positioning.',
+    icon: 'MessageSquare',
+    badge: 'Viral Reach',
+    description: 'Dominate tech Twitter with viral build-in-public storytelling, value-packed threads, snappy product teasers, and calculated engagement loops.',
+    deliverables: [
+      'X content strategy',
+      'Daily posts',
+      'Threads',
+      'Engagement',
+      'Community building',
+      'Founder/startup positioning'
+    ],
+    resultsMetric: '500k - 2.5M impressions & active builder audience',
+    idealFor: 'Founders building in public, AI startups, Web3, and developer tools.',
+    featured: true
+  },
+  {
+    id: 'reddit-marketing',
+    title: 'Reddit Marketing',
+    tagline: 'Authentic sub-community research, organic discovery & reputation engineering.',
+    icon: 'Sparkles',
+    badge: 'High Intent',
+    description: 'Tap into Reddit’s highest-converting communities without getting banned. We research relevant subreddits, engage organically, and position your product as the natural solution.',
+    deliverables: [
+      'Reddit community research',
+      'Organic community engagement',
+      'Content strategy',
+      'Product discovery',
+      'Community-based promotion',
+      'Reddit reputation building'
+    ],
+    resultsMetric: '15k+ high-intent referral visits & authentic user feedback',
+    idealFor: 'Consumer apps, developer tools, SaaS, and productivity solutions.',
+    featured: false
+  },
+  {
+    id: 'personal-branding',
+    title: 'Personal Branding',
+    tagline: 'Elevate founder authority and turn the creator-in-chief into a customer magnet.',
+    icon: 'UserCheck',
+    badge: 'Authority',
+    description: 'People invest in and buy from founders they trust. We build your bespoke personal brand on LinkedIn and X through vulnerable storytelling, industry hot-takes, and visionary thought-leadership.',
+    deliverables: [
+      'Founder personal branding',
+      'LinkedIn positioning',
+      'X personal branding',
+      'Thought-leadership content',
+      'Founder storytelling',
+      'Audience building'
+    ],
+    resultsMetric: '10x inbound investor and customer conversations',
+    idealFor: 'Early-stage & venture-backed CEOs, solo founders, and agency leaders.',
+    featured: false
   },
   {
     id: 'influencer-marketing',
-    title: 'Tech Influencer & Creator Amplification',
-    tagline: 'Orchestrate high-ROI creator sponsorships without burning budget on fake engagement.',
+    title: 'Influencer Marketing',
+    tagline: 'Curated tech creator partnerships, outreach, and high-ROI sponsorships.',
     icon: 'Megaphone',
-    badge: 'Viral Boost',
-    description: 'Stop cold DMing influencers who ignore you or deliver zero clicks. I leverage my personal roster of 220+ verified tech YouTubers, X creators, newsletter authors, and TikTok tech reviewers for authentic product walkthroughs.',
+    badge: 'Creator Boost',
+    description: 'Leverage our private roster of 220+ verified tech YouTubers, X creators, newsletter writers, and reviewers for authentic product walkthroughs with zero ad waste.',
     deliverables: [
-      'Curated shortlist of creators matched to your exact buyer persona',
-      'Briefing doc creation, script frameworks & USP angle formulation',
-      'End-to-end contract negotiation & guaranteed delivery milestones',
-      'Custom UTM tracking, affiliate codes & conversion dashboard setup',
-      'Syndication into leading tech and AI newsletters (50k-250k subscribers)'
+      'Influencer/creator research',
+      'Influencer outreach',
+      'Campaign strategy',
+      'Creator collaborations',
+      'Campaign management',
+      'Performance tracking'
     ],
-    resultsMetric: '3.8x Average Return on Creator Ad Spend',
-    idealFor: 'Funded startups with a marketing budget ready to scale user acquisition fast.'
+    resultsMetric: '3.8x average return on creator spend & guaranteed reach',
+    idealFor: 'Funded tech startups looking to scale customer acquisition rapidly.',
+    featured: false
   },
   {
-    id: 'full-throttle-sprint',
-    title: 'The 360° Viral Launch Sprint (All-in-One)',
-    tagline: 'The complete launch juggernaut combining Hunting + Social Blitz + Creator syndication.',
-    icon: 'Rocket',
-    badge: 'Most Popular for Series A/Seed',
-    description: 'When launch failure is not an option. A complete 30-day intensive program where we orchestrate the Product Hunt hunt, coordinate 30+ simultaneous social posts, and activate 10+ creators on launch day for an inescapable omnipresence.',
+    id: 'instagram-marketing',
+    title: 'Instagram Marketing',
+    tagline: 'Visual brand storytelling, Reels/Carousels, and aesthetic creator campaigns.',
+    icon: 'Globe',
+    badge: 'Visual Growth',
+    description: 'Engage visual and mobile audiences through dynamic Instagram reels, founder behind-the-scenes carousels, targeted creator collaborations, and community campaigns.',
     deliverables: [
-      'Complete Product Hunt Hunt & 24h War Room support',
-      '2-Week Pre-Launch X & LinkedIn momentum campaign',
-      '5-10 Creator video/thread activations on launch morning',
-      'Press release pitching to TechCrunch, Ben\'s Bites, & The Rundown AI',
-      'Post-launch retention strategy & investor update deck highlight package'
+      'Instagram content strategy',
+      'Personal/company branding',
+      'Content planning',
+      'Audience engagement',
+      'Creator collaborations',
+      'Growth campaigns'
     ],
-    resultsMetric: 'Top #1 Product of the Day + 15k+ visits in 48h',
-    idealFor: 'Founders who want a done-for-you explosive public launch with zero guesswork.'
+    resultsMetric: 'High engagement rates & visual brand prestige',
+    idealFor: 'Design-led apps, consumer tech, lifestyle SaaS, and personal brand builders.',
+    featured: false
   }
 ];
 
@@ -123,9 +202,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     founderName: 'Alex Thorne',
     founderTitle: 'Co-Founder & CEO, OmniFlow',
     founderAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
-    testimonial: 'Shivam is a launch wizard. He crafted our positioning, coached us on first-day maker replies, and activated his creator network on X. We held #1 all 24 hours and closed a $2.5M Seed round two weeks later.',
-    summary: 'OmniFlow needed an explosive debut to compete with established AI design suites. Shivam orchestrated a 2-week build-in-public ramp on X followed by a midnight launch attack.',
-    keyStrategy: 'Synchronized X demo video dropping at 12:05 AM PST with 8 creator retweets driving instant front-page velocity.'
+    testimonial: 'Shivam is a launch master. He crafted our positioning, coached us on first-day maker replies, and activated his creator network on X and LinkedIn. We held #1 all 24 hours and closed a $2.5M Seed round two weeks later.',
+    summary: 'OmniFlow needed an explosive debut to compete with established AI design suites. Shivam orchestrated a multi-channel warm-up followed by a midnight launch attack.',
+    keyStrategy: 'Synchronized X demo video and LinkedIn thought piece dropping at 12:05 AM PST driving instant front-page velocity.'
   },
   {
     id: 'devpulse',
@@ -142,9 +221,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     founderName: 'Devon Patel',
     founderTitle: 'CTO, DevPulse Technologies',
     founderAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
-    testimonial: 'Before Shivam stepped in, our previous launch ended at #14. With Shivam as our hunter and strategist, we dominated the tech category, stayed #1 for 3 days straight, and gained massive developer trust.',
-    summary: 'Dev tools are notoriously hard to market. Shivam translated dense telemetry specs into crystal-clear micro-demos for LinkedIn carousels and developer X influencers.',
-    keyStrategy: 'High-contrast interactive animated GIF previews and targeted endorsements from well-known open-source maintainers.'
+    testimonial: 'Before Shivam stepped in, our previous launch ended at #14. With Shivam leading our launch strategy and Reddit promotion, we dominated the tech category and stayed #1 for 3 days straight.',
+    summary: 'Dev tools are notoriously hard to market. Shivam translated dense telemetry specs into crystal-clear micro-demos for Reddit, X, and LinkedIn developer influencers.',
+    keyStrategy: 'High-contrast interactive animated GIF previews and organic Reddit community discovery discussions.'
   },
   {
     id: 'synthetix',
@@ -161,7 +240,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     founderName: 'Sarah Lin',
     founderTitle: 'Founder, KipNotes',
     founderAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
-    testimonial: 'Shivam’s LinkedIn playbook generated 40+ enterprise inbound leads in the first week alone. He doesn’t just hunt; he creates actual business pipeline.',
+    testimonial: 'Shivam’s LinkedIn and personal branding playbook generated 40+ enterprise inbound leads in the first week alone. He doesn’t just launch; he creates an enduring customer acquisition engine.',
     summary: 'Targeted B2B decision-makers on LinkedIn alongside the Product Hunt push, resulting in 40+ sales calls booked in 7 days.',
     keyStrategy: 'Founder ghostwritten breakdown of "How we built an AI tool to save 12 engineering hours a week" which reached 180k impressions.'
   }
@@ -196,7 +275,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Co-Founder',
     company: 'PromptDeck',
     avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80',
-    quote: 'The influencer campaign Shivam managed delivered $18k in MRR from day one. He knows every key tech creator personally and gets them to genuinely care about your product.',
+    quote: 'The influencer and Reddit campaign Shivam managed delivered $18k in MRR from day one. He knows every key tech creator and sub-community intimately.',
     platform: 'linkedin',
     highlight: '$18k MRR Added in Month 1',
     verifiedLaunch: 'Creator Campaign'
@@ -207,7 +286,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Product Lead',
     company: 'SyncPulse',
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
-    quote: 'If you want to win on Product Hunt, having Shivam in your corner is unfair advantage. He treats your launch as if it was his own company.',
+    quote: 'If you want to win on Product Hunt and establish a solid personal brand, having Shivam in your corner is an unfair advantage.',
     platform: 'producthunt',
     highlight: 'Golden Kitty Award Nominee',
     verifiedLaunch: 'Top 3 Finisher'
@@ -218,38 +297,32 @@ export const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     category: 'Product Hunt',
-    question: 'Why should I launch with a Hunter like Shivam instead of hunting myself?',
-    answer: 'When an Elite Top 1% Hunter posts your product, thousands of active Product Hunt followers receive an instant notification email and app alert. More importantly, I bring battle-tested launch mechanics: pinpoint timing, high-converting thumbnail psychology, maker comment copywriting, anti-spam algorithm protection, and active war room guidance throughout the entire 24-hour cycle.'
+    question: 'Why should I launch with Shivam Kushwaha & AxentAI Labs?',
+    answer: 'We bring battle-tested launch mechanics: precision scheduling, high-converting thumbnail psychology, maker comment copywriting, anti-spam algorithm protection, and active war room guidance throughout the entire 24-hour Product Hunt cycle with cross-platform amplification on X and LinkedIn.'
   },
   {
     id: 'faq-2',
     category: 'Product Hunt',
     question: 'How far in advance should we start preparing for our Product Hunt launch?',
-    answer: 'The ideal window is 3 to 4 weeks before your target launch date. This allows us to set up your Product Hunt "Coming Soon" teaser page (to gather 300-800 pre-launch subscribers), warm up your social channels with build-in-public content, and coordinate launch day support with early beta users and tech communities.'
+    answer: 'The ideal window is 3 to 4 weeks before your target launch date. This allows us to set up your Product Hunt "Coming Soon" teaser page, warm up your social channels with build-in-public content, and coordinate launch day support with early beta users and tech communities.'
   },
   {
     id: 'faq-3',
     category: 'X & LinkedIn',
-    question: 'How do you create authentic social content without sounding like generic corporate marketing?',
-    answer: 'I conduct an in-depth founder discovery session to extract your authentic voice, unique technical opinions, and battle stories. We avoid corporate buzzwords entirely, focusing on raw insights, transparent metrics, visually compelling breakdown carousels, and relatable memes that resonate with builders and decision-makers.'
+    question: 'How do you handle LinkedIn, X & Reddit social media management?',
+    answer: 'We conduct an in-depth founder discovery session to extract your authentic voice, unique technical opinions, and battle stories. We manage post creation, thread writing, daily engagement, and sub-community positioning that converts followers into paying customers.'
   },
   {
     id: 'faq-4',
     category: 'Influencer Marketing',
-    question: 'How do you prevent wasting budget on influencers with bot or low-converting followers?',
-    answer: 'I run every creator through rigorous multi-point vetting: historical engagement rates, comment quality audits (detecting automated comment pods), authentic audience demographics, and past sponsorship CTRs. We only work with creators who produce genuine video walkthroughs and authentic demonstrations.'
+    question: 'How do you structure creator and influencer collaborations?',
+    answer: 'We run every creator through rigorous multi-point vetting: historical engagement rates, comment quality audits, authentic audience demographics, and past sponsorship CTRs. We manage outreach, briefs, contracts, and track ROI end-to-end.'
   },
   {
     id: 'faq-5',
     category: 'Pricing & Process',
-    question: 'Do you work with bootstrapped indie hackers as well as funded startups?',
-    answer: 'Yes! I offer flexible tiers ranging from dedicated Product Hunt Hunting packages tailored for bootstrapped indie makers to comprehensive 360° viral launch sprints designed for seed and Series A startups. Every package is transparent with clear deliverable milestones.'
-  },
-  {
-    id: 'faq-6',
-    category: 'Product Hunt',
-    question: 'What happens during the 24-hour Launch Day War Room?',
-    answer: 'At 12:01 AM PST when Product Hunt resets, I submit your product with optimized assets. Throughout the day, I monitor leaderboard velocity, guide you through responding to community questions, execute timed cross-promotional drops on X and LinkedIn, and advise on timezone-specific momentum boosts.'
+    question: 'Do you work with bootstrapped solo founders as well as funded startups?',
+    answer: 'Yes! We offer tailored packages ranging from dedicated Product Hunt Launch Support to full multi-channel Social Media Management, Personal Branding, and Creator Syndication. Book a call to get a custom roadmap.'
   }
 ];
 
@@ -291,3 +364,4 @@ export const LAUNCH_READINESS_QUESTIONS: LaunchReadinessQuestion[] = [
     ]
   }
 ];
+

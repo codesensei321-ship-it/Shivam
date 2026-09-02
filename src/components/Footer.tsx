@@ -16,9 +16,10 @@ import { Badge } from './ui/badge';
 interface FooterProps {
   onOpenBooking: () => void;
   onOpenAudit: () => void;
+  onOpenLegal?: (tab: 'privacy' | 'terms') => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAudit }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAudit, onOpenLegal }) => {
   const [time, setTime] = useState<string>('');
 
   useEffect(() => {
@@ -152,22 +153,40 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAudit }) =>
         {/* Bottom Sub-footer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
           <div>
-            © {new Date().getFullYear()} Shivam. All rights reserved. Crafted for high-growth founders.
+            © {new Date().getFullYear()} Shivam. All rights reserved. AxentAI Labs.
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-wrap justify-center">
+            {onOpenLegal && (
+              <>
+                <button
+                  onClick={() => onOpenLegal('privacy')}
+                  className="hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </button>
+                <span>•</span>
+                <button
+                  onClick={() => onOpenLegal('terms')}
+                  className="hover:text-white transition-colors"
+                >
+                  Terms of Service
+                </button>
+                <span>•</span>
+              </>
+            )}
             <button
               onClick={onOpenAudit}
               className="hover:text-white transition-colors"
             >
-              Launch Readiness Tool
+              Launch Readiness
             </button>
             <span>•</span>
             <button
               onClick={onOpenBooking}
-              className="text-[#DA552F] hover:underline font-semibold transition-colors"
+              className="text-[#FF5A1E] hover:underline font-semibold transition-colors"
             >
-              Book Strategy Call
+              Book Call
             </button>
             <span>•</span>
             <button

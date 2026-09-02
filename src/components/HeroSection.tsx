@@ -6,18 +6,18 @@ import {
   Sparkles, 
   ArrowRight, 
   CheckCircle2, 
-  Share2, 
   Flame, 
-  MessageSquare, 
   ThumbsUp, 
-  ExternalLink,
   ShieldCheck,
   Zap,
-  Award
+  Calendar,
+  Phone,
+  MessageSquare,
+  Star
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import { STAT_METRICS } from '../data/portfolioData';
+import { STAT_METRICS, CONTACT_INFO } from '../data/portfolioData';
 
 interface HeroSectionProps {
   onOpenAudit: () => void;
@@ -40,359 +40,330 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
   };
 
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-grid-pattern">
-      {/* Decorative Light Ambient Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] ambient-glow pointer-events-none -z-10" />
-      <div className="absolute top-40 right-10 w-96 h-96 ambient-glow-purple pointer-events-none -z-10 opacity-70" />
-
+    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-[#FAF9F6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top Hero Pill Badge */}
-        <div className="flex justify-center mb-6">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-amber-200/90 shadow-sm shadow-orange-500/10 backdrop-blur-md"
-          >
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-            </span>
-            <span className="text-xs font-bold text-slate-800 tracking-wide">
-              Product Hunt Hunter <span className="text-slate-300">•</span> X & LinkedIn SMM <span className="text-slate-300">•</span> Influencer Growth
-            </span>
-            <span className="bg-orange-100 text-orange-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
-              Elite Hunter
-            </span>
-          </motion.div>
-        </div>
-
-        {/* Main Headline & Subtitle */}
-        <div className="text-center max-w-4xl mx-auto mb-10">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 tracking-tight leading-[1.12]"
-          >
-            Hi, I’m <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">Shivam</span>. <br className="hidden sm:inline" />
-            I Turn Tech Products into <span className="underline decoration-orange-400 decoration-wavy decoration-2">#1 Product of the Day</span> & Viral Sensations.
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-lg sm:text-xl text-slate-600 font-normal leading-relaxed max-w-3xl mx-auto"
-          >
-            I engineer high-velocity distribution for ambitious founders. Through top-tier 
-            <strong className="text-slate-900 font-semibold"> Product Hunt hunting</strong>, viral 
-            <strong className="text-slate-900 font-semibold"> X & LinkedIn organic SMM</strong>, and targeted 
-            <strong className="text-slate-900 font-semibold"> tech creator influencer campaigns</strong>, I guarantee unmatched launch day momentum.
-          </motion.p>
-
-          {/* Action CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Button
-              id="hero-primary-cta"
-              size="lg"
-              onClick={onOpenBooking}
-              className="w-full sm:w-auto text-base px-8 py-3.5 shadow-xl shadow-orange-500/25 group"
-            >
-              <span>Plan Your Next Launch</span>
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
-
-            <Button
-              id="hero-secondary-audit"
-              variant="outline"
-              size="lg"
-              onClick={onOpenAudit}
-              className="w-full sm:w-auto text-base px-6 py-3.5 bg-white/95 border-slate-300 hover:border-orange-300 hover:bg-orange-50/40 text-slate-800 font-semibold"
-            >
-              <Sparkles className="w-4 h-4 mr-2 text-amber-500" />
-              Check Launch Readiness (Score 0-100%)
-            </Button>
-          </motion.div>
-
-          {/* Trust Guarantees */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-6 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-slate-500 font-medium"
-          >
-            <span className="flex items-center gap-1.5 text-slate-700">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-              185+ Verified Front-page Launches
-            </span>
-            <span className="flex items-center gap-1.5 text-slate-700">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-              Zero Bot Policy • 100% Organic Velocity
-            </span>
-            <span className="flex items-center gap-1.5 text-slate-700">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-              24-Hour Active Launch War Room
-            </span>
-          </motion.div>
-        </div>
-
-        {/* Interactive Live Launch Showcase Stage */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          className="relative max-w-4xl mx-auto mt-6"
-        >
-          {/* Card Container with subtle shadow & border decorum */}
-          <div className="relative rounded-3xl border border-slate-200/90 bg-white/95 p-4 sm:p-7 shadow-2xl shadow-slate-900/10 backdrop-blur-xl">
+        {/* Main Hero 2-Column Layout matching image.png */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
+          
+          {/* Left Column: Bold Headline, Subtitle, Testimonial & Pill CTAs */}
+          <div className="lg:col-span-7 space-y-6">
             
-            {/* Header / Tabs in Launch Terminal */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-100">
-              <div className="flex items-center gap-3">
-                <div className="flex gap-1.5">
-                  <span className="w-3 h-3 rounded-full bg-rose-400/80" />
-                  <span className="w-3 h-3 rounded-full bg-amber-400/80" />
-                  <span className="w-3 h-3 rounded-full bg-emerald-400/80" />
-                </div>
-                <div className="flex items-center gap-2 pl-2">
-                  <Badge variant="orange" className="text-[11px] font-bold">
-                    <Trophy className="w-3 h-3 mr-1 text-orange-600" />
-                    LIVE LAUNCH SIMULATOR
-                  </Badge>
-                  <span className="text-xs text-slate-500 font-mono-code">producthunt.com/posts/shivam-hunt</span>
-                </div>
-              </div>
+            {/* Top Pill status */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E5E1] shadow-sm">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5A1E] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF5A1E]"></span>
+              </span>
+              <span className="text-xs font-bold text-[#1A1A1A] tracking-wide">
+                Founder — AxentAI Labs
+              </span>
+              <span className="text-[#1A1A1A]/30">•</span>
+              <span className="text-xs font-semibold text-[#FF5A1E]">
+                Top 1% Hunter
+              </span>
+            </div>
 
-              {/* View switcher */}
-              <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl text-xs font-semibold text-slate-600">
-                <button
-                  id="tab-view-ph"
-                  onClick={() => setActivePreviewTab('ph')}
-                  className={`px-3 py-1 rounded-lg transition-all ${
-                    activePreviewTab === 'ph'
-                      ? 'bg-white text-orange-700 shadow-sm font-bold'
-                      : 'hover:text-slate-900'
-                  }`}
-                >
-                  Product Hunt View
-                </button>
-                <button
-                  id="tab-view-x"
-                  onClick={() => setActivePreviewTab('x')}
-                  className={`px-3 py-1 rounded-lg transition-all ${
-                    activePreviewTab === 'x'
-                      ? 'bg-white text-slate-900 shadow-sm font-bold'
-                      : 'hover:text-slate-900'
-                  }`}
-                >
-                  𝕏 Viral Thread
-                </button>
-                <button
-                  id="tab-view-linkedin"
-                  onClick={() => setActivePreviewTab('linkedin')}
-                  className={`px-3 py-1 rounded-lg transition-all ${
-                    activePreviewTab === 'linkedin'
-                      ? 'bg-white text-blue-700 shadow-sm font-bold'
-                      : 'hover:text-slate-900'
-                  }`}
-                >
-                  LinkedIn Growth
-                </button>
+            {/* Main Name & Title */}
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display text-[#1A1A1A] tracking-tight leading-[1.08]">
+                I'm Shivam Kushwaha<span className="text-[#FF5A1E]">.</span>
+              </h1>
+              <p className="mt-3 text-lg sm:text-xl font-medium text-[#1A1A1A]/80 leading-snug">
+                Growth & Multi-Channel Distribution Strategist based in India, helping tech startups achieve global reach.
+              </p>
+            </div>
+
+            {/* Description Paragraph */}
+            <p className="text-sm sm:text-base text-[#1A1A1A]/70 leading-relaxed font-sans max-w-xl">
+              I specialize in high-velocity <strong className="text-[#1A1A1A] font-semibold">Product Hunt Launches</strong>, viral organic <strong className="text-[#1A1A1A] font-semibold">LinkedIn & X (Twitter) SMM</strong>, <strong className="text-[#1A1A1A] font-semibold">Reddit Marketing</strong>, and <strong className="text-[#1A1A1A] font-semibold">Tech Influencer Syndication</strong>.
+            </p>
+
+            {/* Featured Testimonial Card from image.png */}
+            <div className="p-5 sm:p-6 rounded-3xl bg-white border border-[#E5E5E1] shadow-sm relative max-w-xl">
+              <div className="flex items-center gap-1 text-[#FF5A1E] mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-[#FF5A1E]" />
+                ))}
+              </div>
+              <p className="text-xs sm:text-sm text-[#1A1A1A]/80 leading-relaxed italic">
+                “Shivam hunted our AI startup and took us straight to #1 Product of the Day. We gained 3,400+ new signups and $18k in ARR within 48 hours!”
+              </p>
+
+              <div className="mt-4 pt-3 border-t border-[#E5E5E1] flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80"
+                    alt="Founder avatar"
+                    className="w-9 h-9 rounded-full object-cover border border-[#E5E5E1]"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div>
+                    <div className="text-xs font-bold text-[#1A1A1A]">Sarah Jenkins</div>
+                    <div className="text-[11px] text-[#1A1A1A]/50">Founder & CEO, FlowGen AI</div>
+                  </div>
+                </div>
+
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#FF5A1E] bg-[#FF5A1E]/10 px-2.5 py-1 rounded-full border border-[#FF5A1E]/20">
+                  #1 Product of Day
+                </span>
               </div>
             </div>
 
-            {/* Simulated Live View Tab: Product Hunt */}
-            {activePreviewTab === 'ph' && (
-              <div className="mt-5 space-y-6">
-                {/* Product Hunt Card */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-2xl bg-gradient-to-r from-orange-50/50 via-amber-50/30 to-white border border-orange-100">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center text-white text-2xl font-bold shadow-md shadow-orange-500/20 shrink-0">
-                      ⚡
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="text-lg font-bold text-slate-900 font-display">SuperLaunch AI</h4>
-                        <span className="inline-flex items-center text-[11px] font-bold text-orange-800 bg-orange-100 px-2 py-0.5 rounded-md border border-orange-200">
-                          🏆 #1 Product of the Day
-                        </span>
-                      </div>
-                      <p className="text-sm text-slate-600 mt-0.5">
-                        Autonomous AI growth engine that turns organic mentions into customers.
-                      </p>
-                      <div className="flex items-center gap-3 mt-2 text-xs text-slate-500 font-medium">
-                        <span className="flex items-center gap-1 text-orange-700 font-semibold bg-orange-100/70 px-2 py-0.5 rounded">
-                          <Flame className="w-3.5 h-3.5" /> Hunted by Shivam
-                        </span>
-                        <span>•</span>
-                        <span>SaaS / AI / Marketing</span>
-                      </div>
-                    </div>
-                  </div>
+            {/* Action Buttons: Portfolio & Book a Call (Orange Pill) */}
+            <div className="flex flex-wrap items-center gap-3.5 pt-2">
+              <a
+                href="#case-studies"
+                className="px-6 py-3 rounded-full border border-[#1A1A1A] bg-white text-[#1A1A1A] text-xs sm:text-sm font-bold hover:bg-[#FAF9F6] transition-all"
+              >
+                Portfolio & Proof
+              </a>
 
-                  {/* Interactive Upvote Button */}
-                  <button
-                    id="simulated-upvote-btn"
-                    onClick={handleUpvote}
-                    className={`flex sm:flex-col items-center justify-center gap-1.5 px-5 py-3 rounded-2xl border-2 transition-all cursor-pointer shadow-sm ${
-                      hasUpvoted
-                        ? 'border-orange-500 bg-orange-500 text-white shadow-md shadow-orange-500/30 scale-105'
-                        : 'border-slate-200 bg-white hover:border-orange-400 hover:bg-orange-50 text-slate-800'
-                    }`}
-                  >
-                    <ThumbsUp className={`w-5 h-5 ${hasUpvoted ? 'text-white' : 'text-orange-600'}`} />
-                    <span className="font-mono-code font-bold text-sm">{upvotes}</span>
-                  </button>
-                </div>
+              <Button
+                id="hero-primary-cta"
+                size="lg"
+                onClick={onOpenBooking}
+                className="bg-[#FF5A1E] hover:bg-[#E04E1A] text-white text-xs sm:text-sm font-bold px-7 py-3 rounded-full shadow-lg shadow-[#FF5A1E]/25 group"
+              >
+                <span>Book a Call</span>
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
 
-                {/* Hunter's First Comment Blueprint */}
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 text-sm">
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-orange-600 to-amber-500 text-white font-bold text-xs flex items-center justify-center">
-                        S
-                      </div>
-                      <span className="font-bold text-slate-900">Shivam</span>
-                      <span className="text-[11px] font-bold text-orange-700 bg-orange-100 px-1.5 py-0.5 rounded">
-                        HUNTER
-                      </span>
-                    </div>
-                    <span className="text-xs text-slate-400 font-mono-code">12:01 AM PST Launch Submission</span>
-                  </div>
-                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    “Thrilled to hunt SuperLaunch today! I've been testing this with the founding team for 3 weeks. 
-                    Their conversion workflow is unmatched. Drop your thoughts below — the makers are here all day to answer your questions!”
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {/* Simulated Live View Tab: X Viral Thread */}
-            {activePreviewTab === 'x' && (
-              <div className="mt-5 space-y-4">
-                <div className="p-5 rounded-2xl bg-slate-950 text-white border border-slate-800">
-                  <div className="flex items-center justify-between pb-3 border-b border-slate-800">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-orange-500 font-bold flex items-center justify-center text-white">
-                        S
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-1.5">
-                          <span className="font-bold text-sm">Shivam 🚀</span>
-                          <span className="text-blue-400 text-xs">✓</span>
-                          <span className="text-xs text-slate-400">@shivam_launches</span>
-                        </div>
-                        <span className="text-[11px] text-slate-400">Product Hunt Hunter & Growth Architect</span>
-                      </div>
-                    </div>
-                    <Badge variant="orange" className="text-xs">
-                      1.2M Views Thread
-                    </Badge>
-                  </div>
-                  <p className="mt-3 text-sm text-slate-200 leading-relaxed font-sans">
-                    We just took a bootstrap AI startup from 0 to <span className="text-amber-400 font-semibold">#1 Product of the Day</span> on Product Hunt + $14,000 MRR in 48 hours. <br /><br />
-                    Here is the exact 7-step viral launch blueprint we used (steal this for your next launch): 🧵👇
-                  </p>
-                  <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono-code">
-                    <span>❤️ 14,280 Likes</span>
-                    <span>🔁 3,840 Reposts</span>
-                    <span>💬 412 Replies</span>
-                    <span>🔖 6,890 Bookmarks</span>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Simulated Live View Tab: LinkedIn */}
-            {activePreviewTab === 'linkedin' && (
-              <div className="mt-5 space-y-4">
-                <div className="p-5 rounded-2xl bg-white border border-slate-200 text-slate-900 shadow-sm">
-                  <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-blue-600 font-bold flex items-center justify-center text-white">
-                        in
-                      </div>
-                      <div>
-                        <span className="font-bold text-sm text-slate-900">Shivam • Founder SMM & Inbound</span>
-                        <p className="text-xs text-slate-500">Helping B2B Founders generate 50+ enterprise demo calls monthly</p>
-                      </div>
-                    </div>
-                    <span className="text-xs text-blue-700 bg-blue-50 font-bold px-2.5 py-1 rounded-full">
-                      High Inbound Playbook
-                    </span>
-                  </div>
-                  <p className="mt-3 text-sm text-slate-700 leading-relaxed">
-                    Most SaaS founders spend $20,000 on cold ads that generate zero qualified calls. <br />
-                    Instead, we built a 14-day carousel breakdown series directly addressing VP of Engineering pain points. <br />
-                    <strong>Result:</strong> 42 Enterprise inquiries booked without spending a single dollar on paid ads.
-                  </p>
-                  <div className="mt-3 p-3 bg-blue-50/60 rounded-xl border border-blue-100 text-xs text-blue-900 flex items-center justify-between">
-                    <span className="font-semibold">📊 480k Organic Impressions • 840+ Comments</span>
-                    <span className="font-bold text-blue-600">Download Blueprint</span>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Bottom Quick Metric Bar */}
-            <div className="mt-5 pt-4 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="text-xs text-slate-500 font-medium">Average PH Finish</div>
-                <div className="text-base sm:text-lg font-bold text-slate-900 font-display">Top 3 Guarantee</div>
-              </div>
-              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="text-xs text-slate-500 font-medium">Avg Upvotes</div>
-                <div className="text-base sm:text-lg font-bold text-orange-600 font-display">850 - 1,500+</div>
-              </div>
-              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="text-xs text-slate-500 font-medium">Organic Creator Network</div>
-                <div className="text-base sm:text-lg font-bold text-slate-900 font-display">220+ Tech Creators</div>
-              </div>
-              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="text-xs text-slate-500 font-medium">Founder Inbound Spike</div>
-                <div className="text-base sm:text-lg font-bold text-emerald-600 font-display">5x - 12x Inflow</div>
-              </div>
+              <a
+                href={CONTACT_INFO.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-3 rounded-full border border-[#E5E5E1] bg-white text-[#1A1A1A]/80 text-xs sm:text-sm font-semibold hover:border-[#1A1A1A] transition-all flex items-center gap-2"
+              >
+                <Phone className="w-3.5 h-3.5 text-emerald-600" />
+                <span>WhatsApp</span>
+              </a>
             </div>
 
           </div>
-        </motion.div>
 
-        {/* Core Stats Grid Bar */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {/* Right Column: "HIRE ME" Badge + Starburst + Live Simulator Terminal */}
+          <div className="lg:col-span-5 space-y-6">
+            
+            {/* HIRE ME Badge & Starburst Graphic row matching image.png */}
+            <div className="flex items-center justify-center lg:justify-end gap-6 pr-2">
+              
+              {/* Starburst 8-pointed geometric line icon */}
+              <div className="w-14 h-14 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center text-[#1A1A1A]/60 hover:text-[#FF5A1E] hover:border-[#FF5A1E] transition-colors">
+                <svg className="w-8 h-8 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
+                </svg>
+              </div>
+
+              {/* Large Circular "HIRE ME" rotating badge stamp */}
+              <div className="relative group cursor-pointer" onClick={onOpenBooking}>
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#FF5A1E] p-1.5 shadow-xl shadow-[#FF5A1E]/30 flex items-center justify-center relative overflow-hidden">
+                  
+                  {/* Rotating Curved Text */}
+                  <div className="absolute inset-0 flex items-center justify-center animate-spin" style={{ animationDuration: '14s' }}>
+                    <svg className="w-full h-full" viewBox="0 0 100 100">
+                      <path
+                        id="circlePath"
+                        d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                        fill="transparent"
+                      />
+                      <text className="text-[9.5px] font-black uppercase tracking-[0.28em] fill-white">
+                        <textPath href="#circlePath" startOffset="0%">
+                          • HIRE SHIVAM • LAUNCH WITH ME 
+                        </textPath>
+                      </text>
+                    </svg>
+                  </div>
+
+                  {/* Inner White Disk */}
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex flex-col items-center justify-center text-center shadow-inner z-10 group-hover:scale-105 transition-transform">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#1A1A1A]">
+                      HIRE
+                    </span>
+                    <span className="text-[11px] font-black uppercase text-[#FF5A1E]">
+                      ME
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Interactive Live Launch Simulator Stage */}
+            <div className="rounded-3xl border border-[#E5E5E1] bg-white p-5 sm:p-6 shadow-xl shadow-black/5">
+              
+              {/* Header / Tabs */}
+              <div className="flex items-center justify-between gap-2 pb-4 border-b border-[#E5E5E1]">
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-400" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                  </div>
+                  <span className="text-xs font-bold text-[#1A1A1A] ml-1">Live Launch Simulator</span>
+                </div>
+
+                <div className="flex bg-[#FAF9F6] p-1 rounded-full border border-[#E5E5E1] text-[11px]">
+                  <button
+                    onClick={() => setActivePreviewTab('ph')}
+                    className={`px-3 py-1 rounded-full font-bold transition-all ${
+                      activePreviewTab === 'ph'
+                        ? 'bg-[#FF5A1E] text-white shadow-xs'
+                        : 'text-[#1A1A1A]/70 hover:text-[#1A1A1A]'
+                    }`}
+                  >
+                    PH
+                  </button>
+                  <button
+                    onClick={() => setActivePreviewTab('x')}
+                    className={`px-3 py-1 rounded-full font-bold transition-all ${
+                      activePreviewTab === 'x'
+                        ? 'bg-[#1A1A1A] text-white shadow-xs'
+                        : 'text-[#1A1A1A]/70 hover:text-[#1A1A1A]'
+                    }`}
+                  >
+                    𝕏
+                  </button>
+                  <button
+                    onClick={() => setActivePreviewTab('linkedin')}
+                    className={`px-3 py-1 rounded-full font-bold transition-all ${
+                      activePreviewTab === 'linkedin'
+                        ? 'bg-blue-600 text-white shadow-xs'
+                        : 'text-[#1A1A1A]/70 hover:text-[#1A1A1A]'
+                    }`}
+                  >
+                    in
+                  </button>
+                </div>
+              </div>
+
+              {/* Tab: Product Hunt */}
+              {activePreviewTab === 'ph' && (
+                <div className="mt-4 space-y-4">
+                  <div className="p-3.5 rounded-2xl bg-[#FAF9F6] border border-[#E5E5E1] flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-xl bg-[#FF5A1E] text-white text-xl font-bold flex items-center justify-center shrink-0">
+                        ⚡
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <h4 className="text-sm font-bold text-[#1A1A1A]">SuperLaunch AI</h4>
+                          <span className="text-[10px] font-bold text-[#FF5A1E] bg-[#FF5A1E]/10 px-2 py-0.5 rounded-full">
+                            🏆 #1 Product
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#1A1A1A]/60 mt-0.5">
+                          Autonomous AI viral distribution engine
+                        </p>
+                      </div>
+                    </div>
+
+                    <button
+                      onClick={handleUpvote}
+                      className={`flex flex-col items-center justify-center px-3.5 py-2 rounded-xl border transition-all cursor-pointer ${
+                        hasUpvoted
+                          ? 'border-[#FF5A1E] bg-[#FF5A1E] text-white'
+                          : 'border-[#E5E5E1] bg-white hover:border-[#FF5A1E] text-[#1A1A1A]'
+                      }`}
+                    >
+                      <ThumbsUp className="w-4 h-4" />
+                      <span className="text-xs font-bold font-mono-code">{upvotes}</span>
+                    </button>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-white border border-[#E5E5E1] text-xs">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-bold text-[#1A1A1A]">Shivam (Hunter Comment)</span>
+                      <span className="text-[10px] text-[#1A1A1A]/40 font-mono-code">12:01 AM PST</span>
+                    </div>
+                    <p className="text-[#1A1A1A]/70 leading-relaxed text-[11px]">
+                      “Thrilled to hunt SuperLaunch today! Tested with the team for 3 weeks. Drop your questions below!”
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Tab: X Viral Thread */}
+              {activePreviewTab === 'x' && (
+                <div className="mt-4 p-4 rounded-2xl bg-[#1A1A1A] text-white border border-[#1A1A1A] space-y-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-full bg-[#FF5A1E] text-white font-bold flex items-center justify-center text-xs">
+                        S
+                      </div>
+                      <div>
+                        <span className="font-bold">Shivam 🚀</span>
+                        <span className="text-[10px] text-white/50 ml-1">@shivam_launches</span>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-bold text-[#FF5A1E] bg-[#FF5A1E]/20 px-2 py-0.5 rounded-full">
+                      1.2M Views
+                    </span>
+                  </div>
+                  <p className="text-xs text-white/80 leading-relaxed font-sans pt-1">
+                    We just took a bootstrap AI startup from 0 to <strong className="text-amber-400">#1 Product of the Day</strong> on Product Hunt + $14,000 MRR in 48 hours. Here is the 7-step blueprint: 🧵👇
+                  </p>
+                </div>
+              )}
+
+              {/* Tab: LinkedIn */}
+              {activePreviewTab === 'linkedin' && (
+                <div className="mt-4 p-4 rounded-2xl bg-white border border-[#E5E5E1] text-[#1A1A1A] space-y-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-bold">Shivam • Founder SMM</span>
+                    <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">
+                      B2B Inbound
+                    </span>
+                  </div>
+                  <p className="text-xs text-[#1A1A1A]/70 leading-relaxed">
+                    How we generated 42 qualified enterprise demo bookings without spending $1 on paid ads using strategic technical carousels.
+                  </p>
+                </div>
+              )}
+
+              {/* Quick Metrics */}
+              <div className="mt-4 pt-3 border-t border-[#E5E5E1] grid grid-cols-3 gap-2 text-center">
+                <div className="p-2 rounded-xl bg-[#FAF9F6]">
+                  <div className="text-[9px] uppercase tracking-wider text-[#1A1A1A]/50 font-bold">Launches</div>
+                  <div className="text-sm font-bold text-[#1A1A1A]">185+</div>
+                </div>
+                <div className="p-2 rounded-xl bg-[#FAF9F6]">
+                  <div className="text-[9px] uppercase tracking-wider text-[#1A1A1A]/50 font-bold">Top 3 Rate</div>
+                  <div className="text-sm font-bold text-[#FF5A1E]">96.2%</div>
+                </div>
+                <div className="p-2 rounded-xl bg-[#FAF9F6]">
+                  <div className="text-[9px] uppercase tracking-wider text-[#1A1A1A]/50 font-bold">Impressions</div>
+                  <div className="text-sm font-bold text-[#1A1A1A]">68M+</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* 4 Stat Cards Row */}
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {STAT_METRICS.map((stat, idx) => (
             <motion.div
               key={stat.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="p-6 rounded-2xl bg-white/90 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-orange-200 transition-all group"
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              className="p-5 rounded-3xl bg-white border border-[#E5E5E1] shadow-xs hover:border-[#FF5A1E] transition-all"
             >
-              <div className="flex items-center justify-between mb-3">
-                <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-100 text-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  {stat.id === 'ph-launches' && <Trophy className="w-5 h-5" />}
-                  {stat.id === 'impressions' && <TrendingUp className="w-5 h-5" />}
-                  {stat.id === 'influencer-reach' && <Sparkles className="w-5 h-5" />}
-                  {stat.id === 'pipeline-value' && <Zap className="w-5 h-5" />}
-                </div>
-                <span className="text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-[#1A1A1A]/60">{stat.label}</span>
+                <span className="text-[10px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                   {stat.growth}
                 </span>
               </div>
-              <div className="text-3xl sm:text-4xl font-black text-slate-900 font-display tracking-tight">
+              <div className="text-3xl font-black text-[#1A1A1A] font-display tracking-tight">
                 {stat.value}
               </div>
-              <div className="text-sm font-bold text-slate-800 mt-1">
-                {stat.label}
-              </div>
-              <div className="text-xs text-slate-500 mt-1 leading-relaxed">
+              <div className="text-xs text-[#1A1A1A]/60 mt-1 leading-relaxed">
                 {stat.subtext}
               </div>
             </motion.div>

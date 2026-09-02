@@ -9,9 +9,12 @@ import { FaqSection } from './components/FaqSection';
 import { CtaSection } from './components/CtaSection';
 import { Footer } from './components/Footer';
 import { InteractiveAuditModal } from './components/InteractiveAuditModal';
+import { PrivacyTermsModal } from './components/PrivacyTermsModal';
 
 export default function App() {
   const [auditOpen, setAuditOpen] = useState(false);
+  const [legalModalOpen, setLegalModalOpen] = useState(false);
+  const [legalTab, setLegalTab] = useState<'privacy' | 'terms'>('privacy');
 
   const scrollToContact = () => {
     const el = document.getElementById('contact');
@@ -20,8 +23,13 @@ export default function App() {
     }
   };
 
+  const handleOpenLegal = (tab: 'privacy' | 'terms') => {
+    setLegalTab(tab);
+    setLegalModalOpen(true);
+  };
+
   return (
-    <div className="min-h-screen bg-[#FAF9F6] text-[#1A1A1A] flex flex-col selection:bg-[#DA552F]/20 selection:text-[#DA552F] font-sans">
+    <div className="min-h-screen bg-[#FAF9F6] text-[#1A1A1A] flex flex-col selection:bg-[#FF5A1E]/20 selection:text-[#FF5A1E] font-sans">
       {/* Top Navbar */}
       <Navbar
         onOpenAudit={() => setAuditOpen(true)}
@@ -39,10 +47,10 @@ export default function App() {
         {/* 2. Social Proof Marquee & Verified Badges */}
         <SocialProofMarquee />
 
-        {/* 3. About Section (Bio, 3 Pillars, Self-Hunt vs Shivam Hunt Comparison) */}
+        {/* 3. About Section (Bio, Portrait, Founder of AxentAI Labs, Core Highlights) */}
         <AboutSection onOpenBooking={scrollToContact} />
 
-        {/* 4. Services Section (PH Hunting, X & LinkedIn SMM, Influencer Campaigns, Sprint + Interactive Blueprint Calculator) */}
+        {/* 4. Services Section (PH Hunting, X & LinkedIn SMM, Reddit, Influencer Campaigns) */}
         <ServicesSection
           onOpenBooking={scrollToContact}
           onOpenAudit={() => setAuditOpen(true)}
@@ -62,6 +70,7 @@ export default function App() {
       <Footer
         onOpenBooking={scrollToContact}
         onOpenAudit={() => setAuditOpen(true)}
+        onOpenLegal={handleOpenLegal}
       />
 
       {/* Interactive Launch Readiness Audit Modal */}
@@ -69,6 +78,13 @@ export default function App() {
         open={auditOpen}
         onOpenChange={setAuditOpen}
         onBookCall={scrollToContact}
+      />
+
+      {/* Legal Privacy & Terms Modal */}
+      <PrivacyTermsModal
+        open={legalModalOpen}
+        onOpenChange={setLegalModalOpen}
+        defaultTab={legalTab}
       />
     </div>
   );
