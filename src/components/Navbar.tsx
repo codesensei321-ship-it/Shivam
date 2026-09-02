@@ -107,7 +107,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
                 <span className="font-bold text-base tracking-tight text-[#1A1A1A] group-hover:text-[#2563EB] transition-colors">
-                  Shivam Kushwaha
+                  AxentAI Labs
                 </span>
                 {isLegalPage && (
                   <span className="text-[10px] font-bold text-[#2563EB] bg-[#2563EB]/10 px-2 py-0.5 rounded-full">
@@ -116,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 )}
               </div>
               <span className="text-[10px] font-medium text-[#1A1A1A]/60 tracking-wider">
-                Founder • AxentAI Labs
+                By Shivam Kushwaha
               </span>
             </div>
           </a>

@@ -60,10 +60,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAudit, onOp
               </div>
               <div>
                 <span className="font-bold text-xl text-white tracking-tight">
-                  Shivam Kushwaha<span className="text-[#3B82F6]">.</span>
+                  AxentAI Labs<span className="text-[#3B82F6]">.</span>
                 </span>
                 <span className="block text-[10px] uppercase font-bold tracking-widest text-slate-400">
-                  Founder • AxentAI Labs
+                  By Shivam Kushwaha
                 </span>
               </div>
             </div>
@@ -160,7 +160,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenAudit, onOp
         {/* Bottom Sub-footer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            © {new Date().getFullYear()} Shivam Kushwaha. All rights reserved. AxentAI Labs.
+            © {new Date().getFullYear()} AxentAI Labs. All rights reserved.
           </div>
 
           <div className="flex items-center gap-4 flex-wrap justify-center">
