@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { CONTACT_INFO } from '../data/portfolioData';
+import shivamAboutPhoto from '../assets/images/shivam_about_1788322002365.jpg';
 
 interface AboutSectionProps {
   onOpenBooking: () => void;
@@ -103,7 +104,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
               {/* Main Photo Card */}
               <div className="relative rounded-3xl overflow-hidden border-2 border-[#1A1A1A] bg-[#FAF9F6] shadow-2xl shadow-black/10">
                 <img
-                  src="/src/assets/images/shivam_about_1788322002365.jpg"
+                  src={shivamAboutPhoto}
                   alt="Shivam Kushwaha - Founder of AxentAI Labs"
                   className="w-full h-auto object-cover aspect-[4/5] hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"

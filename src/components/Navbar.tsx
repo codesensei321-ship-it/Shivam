@@ -8,9 +8,16 @@ import { CONTACT_INFO } from '../data/portfolioData';
 interface NavbarProps {
   onOpenAudit: () => void;
   onOpenBooking: () => void;
+  onNavigateHome?: () => void;
+  isLegalPage?: boolean;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit, onOpenBooking }) => {
+export const Navbar: React.FC<NavbarProps> = ({ 
+  onOpenAudit, 
+  onOpenBooking,
+  onNavigateHome,
+  isLegalPage = false 
+}) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -48,6 +55,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit, onOpenBooking }) =>
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (onNavigateHome) {
+      e.preventDefault();
+      onNavigateHome();
+    }
+  };
+
+  const handleNavLinkClick = (href: string) => {
+    setMobileMenuOpen(false);
+    if (isLegalPage && onNavigateHome) {
+      onNavigateHome();
+      setTimeout(() => {
+        const targetId = href.replace('#', '');
+        const el = document.getElementById(targetId);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   return (
     <header
       id="main-navbar"
@@ -64,8 +90,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit, onOpenBooking }) =>
           {/* Brand Logo & Tag */}
           <a
             href="#home"
+            onClick={handleLogoClick}
             id="nav-logo"
-            className="flex items-center gap-2.5 group"
+            className="flex items-center gap-2.5 group cursor-pointer"
           >
             <div className="w-9 h-9 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center font-bold text-sm shadow-sm group-hover:bg-[#FF5A1E] transition-colors">
               SK
@@ -76,6 +103,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit, onOpenBooking }) =>
                 <span className="font-bold text-base tracking-tight text-[#1A1A1A]">
                   Shivam Kushwaha
                 </span>
+                {isLegalPage && (
+                  <span className="text-[10px] font-bold text-[#FF5A1E] bg-[#FF5A1E]/10 px-2 py-0.5 rounded-full">
+                    Legal Policy
+                  </span>
+                )}
               </div>
               <span className="text-[10px] font-medium text-[#1A1A1A]/60 tracking-wider">
                 Founder • AxentAI Labs
@@ -86,11 +118,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit, onOpenBooking }) =>
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.id;
+              const isActive = !isLegalPage && activeSection === link.id;
               return (
                 <a
                   key={link.name}
                   href={link.href}
+                  onClick={() => handleNavLinkClick(link.href)}
                   id={`nav-link-${link.id}`}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all ${
                     isActive
@@ -163,7 +196,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAudit, onOpenBooking }) =>
                   <a
                     key={link.name}
                     href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => handleNavLinkClick(link.href)}
                     className="px-3.5 py-2 rounded-xl text-sm font-semibold text-[#1A1A1A] hover:bg-[#FAF9F6] transition-colors"
                   >
                     {link.name}
