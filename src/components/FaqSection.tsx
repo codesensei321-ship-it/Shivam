@@ -31,7 +31,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenBooking }) => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-[#DA552F] font-bold tracking-[0.25em] text-xs uppercase mb-3 inline-block">
+          <span className="text-[#2563EB] font-bold tracking-[0.25em] text-xs uppercase mb-3 inline-block">
             Frequently Asked Questions
           </span>
           <h2 className="text-4xl sm:text-5xl font-serif-artistic font-medium text-[#1A1A1A] tracking-tight leading-tight">

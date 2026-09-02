@@ -13,7 +13,8 @@ import {
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { CONTACT_INFO } from '../data/portfolioData';
-import shivamAboutPhoto from '../assets/images/shivam_about_1788322002365.jpg';
+import shivamAboutPhoto from '../assets/images/Screenshot_2026-09-02-09-30-52-50_99c04817c0de5652397fc8b56c3b3817.jpg';
+import brandLogo from '../assets/images/0BB3492B-F314-44D3-BEB0-48FA1559EF8C.png';
 
 interface AboutSectionProps {
   onOpenBooking: () => void;
@@ -39,7 +40,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
             
             {/* Pill Label */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF9F6] border border-[#E5E5E1]">
-              <span className="w-2 h-2 rounded-full bg-[#FF5A1E]" />
+              <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
               <span className="text-xs font-bold text-[#1A1A1A] tracking-wide uppercase">
                 About Me
               </span>
@@ -47,18 +48,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
 
             {/* Bold Headline */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-[#1A1A1A] tracking-tight leading-[1.14]">
-              I'm Shivam Kushwaha, Founder of <span className="text-[#FF5A1E]">AxentAI Labs</span> dedicated to crafting high-impact growth and viral distribution for ambitious tech startups.
+              I'm Shivam Kushwaha, Founder of <span className="text-[#2563EB]">AxentAI Labs</span> dedicated to crafting high-impact growth and viral distribution for ambitious tech startups.
             </h2>
 
             <p className="text-sm sm:text-base text-[#1A1A1A]/70 leading-relaxed font-sans">
               Building great software is only half the battle. If nobody hears about it, even groundbreaking products disappear. I work as an embedded co-pilot for founders—engineering every launch milestone from pre-heat teasers to front-page dominance and long-term organic pipeline growth.
             </p>
 
-            {/* Bullet Points with Orange Accents */}
+            {/* Bullet Points with Blue Accents */}
             <div className="space-y-3 pt-2">
               {highlights.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#FF5A1E]/10 text-[#FF5A1E] flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-[#2563EB]/10 text-[#2563EB] flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
                   <span className="text-xs sm:text-sm text-[#1A1A1A]/85 font-medium leading-relaxed">
@@ -73,7 +74,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
               <Button
                 size="lg"
                 onClick={onOpenBooking}
-                className="bg-[#FF5A1E] hover:bg-[#E04E1A] text-white text-xs sm:text-sm font-bold px-7 py-3 rounded-full shadow-lg shadow-[#FF5A1E]/25 group"
+                className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-bold px-7 py-3 rounded-full shadow-lg shadow-[#2563EB]/25 group"
               >
                 <span>Book a Call</span>
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -92,29 +93,34 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
 
           </div>
 
-          {/* Right Column: Headshot with Minimalist Wireframe Curves matching image.png */}
-          <div className="lg:col-span-5 relative">
+          {/* Right Column: Headshot with Added Padding and Taller Image Aspect */}
+          <div className="lg:col-span-5 relative pt-8 sm:pt-10">
             <div className="relative mx-auto max-w-sm sm:max-w-md">
               
-              {/* Background Geometric Wireframe Arcs matching image.png */}
-              <div className="absolute -top-6 -left-6 w-72 h-72 rounded-full border border-[#FF5A1E]/30 pointer-events-none -z-10 animate-pulse" />
+              {/* Background Geometric Wireframe Arcs */}
+              <div className="absolute -top-6 -left-6 w-72 h-72 rounded-full border border-[#2563EB]/30 pointer-events-none -z-10 animate-pulse" />
               <div className="absolute -bottom-6 -right-6 w-80 h-80 rounded-full border border-[#1A1A1A]/15 pointer-events-none -z-10" />
-              <div className="absolute top-1/2 -right-8 -translate-y-1/2 w-48 h-48 rounded-full border-2 border-dashed border-[#FF5A1E]/20 pointer-events-none -z-10" />
+              <div className="absolute top-1/2 -right-8 -translate-y-1/2 w-48 h-48 rounded-full border-2 border-dashed border-[#2563EB]/20 pointer-events-none -z-10" />
 
-              {/* Main Photo Card */}
-              <div className="relative rounded-3xl overflow-hidden border-2 border-[#1A1A1A] bg-[#FAF9F6] shadow-2xl shadow-black/10">
+              {/* Main Photo Card - Balanced framing with subtle trim top and bottom */}
+              <div className="relative rounded-3xl overflow-hidden border-2 border-[#1A1A1A] bg-[#0A3C42] shadow-2xl shadow-blue-500/5 aspect-[4/5] sm:aspect-[4/5]">
                 <img
                   src={shivamAboutPhoto}
                   alt="Shivam Kushwaha - Founder of AxentAI Labs"
-                  className="w-full h-auto object-cover aspect-[4/5] hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-[center_38%] hover:scale-102 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
 
                 {/* Bottom Floating Info Tag */}
                 <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E5E5E1] shadow-lg flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center font-bold text-xs">
-                      SK
+                    <div className="w-9 h-9 rounded-full overflow-hidden border border-[#2563EB]/30 p-0.5 bg-white shadow-xs flex items-center justify-center shrink-0">
+                      <img
+                        src={brandLogo}
+                        alt="Logo"
+                        className="w-full h-full object-cover rounded-full"
+                        referrerPolicy="no-referrer"
+                      />
                     </div>
                     <div>
                       <div className="text-xs font-bold text-[#1A1A1A]">Shivam Kushwaha</div>
@@ -122,7 +128,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
                     </div>
                   </div>
 
-                  <span className="text-[10px] font-bold text-[#FF5A1E] bg-[#FF5A1E]/10 px-2.5 py-1 rounded-full border border-[#FF5A1E]/20">
+                  <span className="text-[10px] font-bold text-[#2563EB] bg-[#2563EB]/10 px-2.5 py-1 rounded-full border border-[#2563EB]/20">
                     Top 1% Hunter
                   </span>
                 </div>
@@ -130,7 +136,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
 
               {/* Floating Verified Badge */}
               <div className="absolute -top-4 -right-4 p-3 rounded-2xl bg-white border border-[#E5E5E1] shadow-lg flex items-center gap-2 text-xs font-bold text-[#1A1A1A] hidden sm:flex">
-                <div className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+                <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
                   ✓
                 </div>
                 <span>185+ Launches</span>

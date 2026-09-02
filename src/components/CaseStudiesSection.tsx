@@ -36,7 +36,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenBo
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-[#DA552F] font-bold tracking-[0.25em] text-xs uppercase mb-3 inline-block">
+          <span className="text-[#2563EB] font-bold tracking-[0.25em] text-xs uppercase mb-3 inline-block">
             Verified Proof & Metrics
           </span>
           <h2 className="text-4xl sm:text-5xl font-serif-artistic font-medium text-[#1A1A1A] tracking-tight leading-tight">
@@ -58,14 +58,14 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenBo
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="rounded-3xl border border-[#E5E5E1] bg-white p-6 sm:p-9 hover:border-[#1A1A1A] transition-all"
+                className="rounded-3xl border border-[#E5E5E1] bg-white p-6 sm:p-9 hover:border-[#2563EB] transition-all"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                   
                   {/* Left Column: Product & Outcome Overview */}
                   <div className="lg:col-span-5 space-y-3.5">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#DA552F] bg-[#DA552F]/10 px-3 py-1 rounded-full border border-[#DA552F]/20">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#2563EB] bg-[#2563EB]/10 px-3 py-1 rounded-full border border-[#2563EB]/20">
                         {study.badgeRank}
                       </span>
                       <span className="text-[10px] font-bold uppercase tracking-wider text-[#1A1A1A]/60 bg-[#FAF9F6] px-2.5 py-1 rounded-full border border-[#E5E5E1]">
@@ -85,7 +85,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenBo
 
                     {/* Key Strategic Lever */}
                     <div className="p-4 rounded-2xl bg-[#FAF9F6] border border-[#E5E5E1] text-xs">
-                      <strong className="text-[#DA552F] font-bold block text-[10px] uppercase tracking-widest mb-1">
+                      <strong className="text-[#2563EB] font-bold block text-[10px] uppercase tracking-widest mb-1">
                         Key Strategy:
                       </strong>
                       <span className="text-[#1A1A1A]/80 leading-relaxed font-serif-artistic italic text-sm">
@@ -100,7 +100,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenBo
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                       <div className="p-3 rounded-2xl bg-[#FAF9F6] border border-[#E5E5E1]">
                         <div className="text-[9px] uppercase tracking-widest text-[#1A1A1A]/50 font-bold">PH Upvotes</div>
-                        <div className="text-2xl font-serif-artistic italic font-bold text-[#DA552F] mt-0.5">
+                        <div className="text-2xl font-serif-artistic italic font-bold text-[#2563EB] mt-0.5">
                           {study.totalUpvotes}+
                         </div>
                       </div>
@@ -143,7 +143,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenBo
                             <div className="text-[10px] text-white/50">{study.founderTitle}</div>
                           </div>
                         </div>
-                        <span className="text-[9px] uppercase tracking-widest font-mono-code text-[#DA552F] bg-white/10 px-2 py-0.5 rounded-full">
+                        <span className="text-[9px] uppercase tracking-widest font-mono-code text-[#3B82F6] bg-white/10 px-2 py-0.5 rounded-full">
                           Verified #1 Launch
                         </span>
                       </div>
@@ -183,12 +183,12 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onOpenBo
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-1 text-[#DA552F]">
+                    <div className="flex items-center gap-1 text-[#2563EB]">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3.5 h-3.5 fill-[#DA552F]" />
+                        <Star key={i} className="w-3.5 h-3.5 fill-[#2563EB]" />
                       ))}
                     </div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#DA552F] bg-white px-2.5 py-0.5 rounded-full border border-[#E5E5E1]">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#2563EB] bg-white px-2.5 py-0.5 rounded-full border border-[#E5E5E1]">
                       {t.highlight}
                     </span>
                   </div>

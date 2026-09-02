@@ -41,7 +41,7 @@ export const PrivacyTermsModal: React.FC<PrivacyTermsModalProps> = ({
           {/* Header */}
           <div className="flex items-center justify-between px-6 py-5 border-b border-[#E5E5E1] bg-white">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-[#FF5A1E]/10 text-[#FF5A1E] flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
                 {activeTab === 'privacy' ? <Shield className="w-5 h-5" /> : <FileText className="w-5 h-5" />}
               </div>
               <div>
@@ -219,7 +219,7 @@ export const PrivacyTermsModal: React.FC<PrivacyTermsModalProps> = ({
                   <div className="flex items-center gap-4 text-xs font-semibold">
                     <span>Founder: Shivam Kushwaha</span>
                     <span>•</span>
-                    <a href={`mailto:${CONTACT_INFO.email}`} className="text-[#FF5A1E] hover:underline">
+                    <a href={`mailto:${CONTACT_INFO.email}`} className="text-blue-600 hover:underline">
                       {CONTACT_INFO.email}
                     </a>
                     <span>•</span>

@@ -76,7 +76,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <Badge variant="orange" className="mb-3">
+          <Badge variant="blue" className="mb-3">
             SPECIALIZED GROWTH SERVICES
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 tracking-tight">
@@ -102,7 +102,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
               onClick={() => setSelectedService('product-hunt-hunting')}
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
                 selectedService === 'product-hunt-hunting'
-                  ? 'bg-orange-600 text-white shadow-sm shadow-orange-500/20'
+                  ? 'bg-blue-600 text-white shadow-sm shadow-blue-500/20'
                   : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'
               }`}
             >
@@ -145,14 +145,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className={`rounded-3xl border transition-all duration-300 flex flex-col justify-between ${
                   isFeatured
-                    ? 'border-orange-300 bg-gradient-to-b from-white via-orange-50/30 to-white shadow-xl shadow-orange-500/10 ring-1 ring-orange-200'
+                    ? 'border-blue-300 bg-gradient-to-b from-white via-blue-50/30 to-white shadow-xl shadow-blue-500/10 ring-1 ring-blue-200'
                     : 'border-slate-200/90 bg-white shadow-sm hover:shadow-lg hover:border-slate-300'
                 }`}
               >
                 <div className="p-7 sm:p-8">
                   {/* Top Badge & Metric */}
                   <div className="flex items-center justify-between gap-3 mb-4 flex-wrap">
-                    <span className="text-xs font-bold text-orange-600 bg-orange-100/80 px-3 py-1 rounded-full border border-orange-200/60">
+                    <span className="text-xs font-bold text-blue-600 bg-blue-100/80 px-3 py-1 rounded-full border border-blue-200/60">
                       {service.badge}
                     </span>
                     <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
@@ -164,7 +164,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
                   <h3 className="text-2xl font-bold text-slate-900 font-display">
                     {service.title}
                   </h3>
-                  <p className="text-sm font-semibold text-orange-600 mt-1">
+                  <p className="text-sm font-semibold text-blue-600 mt-1">
                     {service.tagline}
                   </p>
 
@@ -199,7 +199,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
                   <Button
                     onClick={onOpenBooking}
                     variant={isFeatured ? 'default' : 'outline'}
-                    className={`w-full justify-center group ${!isFeatured ? 'hover:border-orange-300 hover:text-orange-700' : ''}`}
+                    className={`w-full justify-center group ${!isFeatured ? 'hover:border-blue-300 hover:text-blue-700' : ''}`}
                   >
                     <span>Inquire About This Service</span>
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -214,7 +214,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
         <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 shadow-xl shadow-slate-900/5">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-8 border-b border-slate-100">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200 mb-2">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 mb-2">
                 <Sliders className="w-3.5 h-3.5" />
                 INTERACTIVE STRATEGY ESTIMATOR
               </div>
@@ -230,9 +230,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
               onClick={onOpenAudit}
               variant="outline"
               size="sm"
-              className="text-xs font-semibold text-slate-800 border-slate-300 hover:border-orange-300 hover:text-orange-700 bg-white"
+              className="text-xs font-semibold text-slate-800 border-slate-300 hover:border-blue-300 hover:text-blue-700 bg-white"
             >
-              <Sparkles className="w-4 h-4 mr-2 text-amber-500" />
+              <Sparkles className="w-4 h-4 mr-2 text-blue-500" />
               Take Full 4-Step Audit
             </Button>
           </div>
@@ -258,7 +258,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
                       onClick={() => setProductType(cat.id as any)}
                       className={`p-3 rounded-xl border text-xs font-bold text-left transition-all ${
                         productType === cat.id
-                          ? 'border-orange-500 bg-orange-50 text-orange-950 ring-1 ring-orange-400'
+                          ? 'border-blue-500 bg-blue-50 text-blue-950 ring-1 ring-blue-400'
                           : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
                       }`}
                     >
@@ -284,7 +284,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
                       onClick={() => setTimeline(time.id as any)}
                       className={`p-2.5 rounded-xl border text-xs font-bold text-center transition-all ${
                         timeline === time.id
-                          ? 'border-orange-500 bg-orange-50 text-orange-950 ring-1 ring-orange-400'
+                          ? 'border-blue-500 bg-blue-50 text-blue-950 ring-1 ring-blue-400'
                           : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
                       }`}
                     >
@@ -310,7 +310,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
                       onClick={() => setTargetGoal(goal.id as any)}
                       className={`p-2.5 rounded-xl border text-xs font-bold text-center transition-all ${
                         targetGoal === goal.id
-                          ? 'border-orange-500 bg-orange-50 text-orange-950 ring-1 ring-orange-400'
+                          ? 'border-blue-500 bg-blue-50 text-blue-950 ring-1 ring-blue-400'
                           : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
                       }`}
                     >
@@ -325,14 +325,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
             {/* Estimated Output Blueprint Card */}
             <div className="lg:col-span-6">
               <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 text-white shadow-xl relative overflow-hidden">
-                <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-orange-500/20 rounded-full blur-2xl" />
+                <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-500/20 rounded-full blur-2xl" />
 
                 <div className="flex items-center justify-between pb-4 border-b border-slate-800">
                   <div className="flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-amber-400" />
+                    <Zap className="w-5 h-5 text-blue-400" />
                     <span className="text-sm font-bold font-display">Target Launch Forecast</span>
                   </div>
-                  <span className="text-[11px] font-mono-code text-orange-400 bg-orange-950/80 px-2 py-0.5 rounded border border-orange-800">
+                  <span className="text-[11px] font-mono-code text-blue-400 bg-blue-950/80 px-2 py-0.5 rounded border border-blue-800">
                     Calculated by Shivam
                   </span>
                 </div>
@@ -340,11 +340,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
                 <div className="mt-5 grid grid-cols-3 gap-3 text-center">
                   <div className="p-3 rounded-xl bg-slate-800/70 border border-slate-700">
                     <div className="text-[11px] text-slate-400">Target Upvotes</div>
-                    <div className="text-lg font-bold text-amber-400 font-display mt-0.5">{estUpvotes}</div>
+                    <div className="text-lg font-bold text-blue-400 font-display mt-0.5">{estUpvotes}</div>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-800/70 border border-slate-700">
                     <div className="text-[11px] text-slate-400">Social Reach</div>
-                    <div className="text-lg font-bold text-orange-400 font-display mt-0.5">{estImpressions}</div>
+                    <div className="text-lg font-bold text-blue-300 font-display mt-0.5">{estImpressions}</div>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-800/70 border border-slate-700">
                     <div className="text-[11px] text-slate-400">Est. Signups</div>
@@ -364,7 +364,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenBooking,
                 <div className="mt-6">
                   <Button
                     onClick={onOpenBooking}
-                    className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-white font-bold"
+                    className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold"
                   >
                     <span>Execute This Plan with Shivam</span>
                     <ArrowRight className="w-4 h-4 ml-2" />

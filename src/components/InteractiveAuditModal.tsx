@@ -72,8 +72,8 @@ export const InteractiveAuditModal: React.FC<InteractiveAuditModalProps> = ({
     } else {
       return {
         label: '🛠️ Needs Pre-Launch Foundation Sprint',
-        color: 'text-orange-600',
-        badgeColor: 'bg-orange-50 text-orange-800 border-orange-200',
+        color: 'text-blue-600',
+        badgeColor: 'bg-blue-50 text-blue-800 border-blue-200',
         summary: 'Launching today would risk your product being buried. Shivam’s 30-day pre-launch teaser strategy will build the necessary waitlist before going public.'
       };
     }
@@ -86,7 +86,7 @@ export const InteractiveAuditModal: React.FC<InteractiveAuditModalProps> = ({
       <DialogContent className="max-w-xl p-6 sm:p-8 bg-[#FAF9F6] border-[#E5E5E1] rounded-3xl">
         <DialogHeader>
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-[#DA552F] font-bold tracking-[0.2em] text-[10px] uppercase">
+            <span className="text-[#2563EB] font-bold tracking-[0.2em] text-[10px] uppercase">
               Interactive Audit
             </span>
           </div>
@@ -105,7 +105,7 @@ export const InteractiveAuditModal: React.FC<InteractiveAuditModalProps> = ({
             {/* Progress bar */}
             <div className="w-full bg-[#E5E5E1] rounded-full h-1 overflow-hidden">
               <div
-                className="bg-[#DA552F] h-full transition-all duration-300 rounded-full"
+                className="bg-[#2563EB] h-full transition-all duration-300 rounded-full"
                 style={{ width: `${((currentStep + 1) / LAUNCH_READINESS_QUESTIONS.length) * 100}%` }}
               />
             </div>
@@ -148,7 +148,7 @@ export const InteractiveAuditModal: React.FC<InteractiveAuditModalProps> = ({
               <div className="text-[10px] uppercase tracking-widest text-white/50 font-bold mb-1">
                 Calculated Readiness Score
               </div>
-              <div className="text-5xl font-serif-artistic italic font-bold text-[#DA552F]">
+              <div className="text-5xl font-serif-artistic italic font-bold text-[#3B82F6]">
                 {score}<span className="text-2xl text-white/40 font-normal">/100</span>
               </div>
               <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/10 text-white border border-white/20">

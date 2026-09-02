@@ -19,7 +19,7 @@ export const SocialProofMarquee: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div className="flex items-center gap-2">
-            <span className="flex h-2 w-2 rounded-full bg-orange-500"></span>
+            <span className="flex h-2 w-2 rounded-full bg-blue-600"></span>
             <p className="text-xs uppercase font-bold tracking-widest text-slate-700">
               Trusted by Top Founders, Accelerators & Builders Worldwide
             </p>
@@ -48,12 +48,12 @@ export const SocialProofMarquee: React.FC = () => {
           {[...logos, ...logos].map((item, idx) => (
             <div
               key={idx}
-              className="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm text-slate-800 hover:border-orange-300 hover:bg-orange-50/50 transition-all cursor-default"
+              className="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm text-slate-800 hover:border-blue-300 hover:bg-blue-50/50 transition-all cursor-default"
             >
               <span className="text-lg">{item.icon}</span>
               <div className="flex flex-col text-left">
                 <span className="text-xs font-bold text-slate-900 tracking-tight">{item.name}</span>
-                <span className="text-[10px] font-semibold text-orange-700">{item.highlight}</span>
+                <span className="text-[10px] font-semibold text-blue-600">{item.highlight}</span>
               </div>
             </div>
           ))}

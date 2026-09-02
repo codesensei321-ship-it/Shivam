@@ -52,14 +52,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
             {/* Top Pill status */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E5E1] shadow-sm">
               <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5A1E] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF5A1E]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2563EB] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2563EB]"></span>
               </span>
               <span className="text-xs font-bold text-[#1A1A1A] tracking-wide">
                 Founder — AxentAI Labs
               </span>
               <span className="text-[#1A1A1A]/30">•</span>
-              <span className="text-xs font-semibold text-[#FF5A1E]">
+              <span className="text-xs font-semibold text-[#2563EB]">
                 Top 1% Hunter
               </span>
             </div>
@@ -67,10 +67,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
             {/* Main Name & Title */}
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display text-[#1A1A1A] tracking-tight leading-[1.08]">
-                I'm Shivam Kushwaha<span className="text-[#FF5A1E]">.</span>
+                I'm Shivam Kushwaha<span className="text-[#2563EB]">.</span>
               </h1>
               <p className="mt-3 text-lg sm:text-xl font-medium text-[#1A1A1A]/80 leading-snug">
-                Growth & Multi-Channel Distribution Strategist based in India, helping tech startups achieve global reach.
+                Growth & Multi-Channel Distribution Strategist helping tech startups achieve global reach.
               </p>
             </div>
 
@@ -81,9 +81,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
 
             {/* Featured Testimonial Card from image.png */}
             <div className="p-5 sm:p-6 rounded-3xl bg-white border border-[#E5E5E1] shadow-sm relative max-w-xl">
-              <div className="flex items-center gap-1 text-[#FF5A1E] mb-2">
+              <div className="flex items-center gap-1 text-[#2563EB] mb-2">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-[#FF5A1E]" />
+                  <Star key={i} className="w-3.5 h-3.5 fill-[#2563EB]" />
                 ))}
               </div>
               <p className="text-xs sm:text-sm text-[#1A1A1A]/80 leading-relaxed italic">
@@ -104,13 +104,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                   </div>
                 </div>
 
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#FF5A1E] bg-[#FF5A1E]/10 px-2.5 py-1 rounded-full border border-[#FF5A1E]/20">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#2563EB] bg-[#2563EB]/10 px-2.5 py-1 rounded-full border border-[#2563EB]/20">
                   #1 Product of Day
                 </span>
               </div>
             </div>
 
-            {/* Action Buttons: Portfolio & Book a Call (Orange Pill) */}
+            {/* Action Buttons: Portfolio & Book a Call (Blue Pill) */}
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <a
                 href="#case-studies"
@@ -123,7 +123,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                 id="hero-primary-cta"
                 size="lg"
                 onClick={onOpenBooking}
-                className="bg-[#FF5A1E] hover:bg-[#E04E1A] text-white text-xs sm:text-sm font-bold px-7 py-3 rounded-full shadow-lg shadow-[#FF5A1E]/25 group"
+                className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-bold px-7 py-3 rounded-full shadow-lg shadow-[#2563EB]/25 group"
               >
                 <span>Book a Call</span>
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -133,7 +133,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                 href={CONTACT_INFO.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-3 rounded-full border border-[#E5E5E1] bg-white text-[#1A1A1A]/80 text-xs sm:text-sm font-semibold hover:border-[#1A1A1A] transition-all flex items-center gap-2"
+                className="px-5 py-3 rounded-full border border-[#E5E5E1] bg-white text-[#1A1A1A]/80 text-xs sm:text-sm font-semibold hover:border-[#2563EB] hover:text-[#2563EB] transition-all flex items-center gap-2"
               >
                 <Phone className="w-3.5 h-3.5 text-emerald-600" />
                 <span>WhatsApp</span>
@@ -149,7 +149,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
             <div className="flex items-center justify-center lg:justify-end gap-6 pr-2">
               
               {/* Starburst 8-pointed geometric line icon */}
-              <div className="w-14 h-14 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center text-[#1A1A1A]/60 hover:text-[#FF5A1E] hover:border-[#FF5A1E] transition-colors">
+              <div className="w-14 h-14 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center text-[#1A1A1A]/60 hover:text-[#2563EB] hover:border-[#2563EB] transition-colors">
                 <svg className="w-8 h-8 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
                 </svg>
@@ -157,7 +157,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
 
               {/* Large Circular "HIRE ME" rotating badge stamp */}
               <div className="relative group cursor-pointer" onClick={onOpenBooking}>
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#FF5A1E] p-1.5 shadow-xl shadow-[#FF5A1E]/30 flex items-center justify-center relative overflow-hidden">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#2563EB] p-1.5 shadow-xl shadow-[#2563EB]/30 flex items-center justify-center relative overflow-hidden">
                   
                   {/* Rotating Curved Text */}
                   <div className="absolute inset-0 flex items-center justify-center animate-spin" style={{ animationDuration: '14s' }}>
@@ -180,7 +180,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                     <span className="text-[10px] font-bold uppercase tracking-widest text-[#1A1A1A]">
                       HIRE
                     </span>
-                    <span className="text-[11px] font-black uppercase text-[#FF5A1E]">
+                    <span className="text-[11px] font-black uppercase text-[#2563EB]">
                       ME
                     </span>
                   </div>
@@ -208,7 +208,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                     onClick={() => setActivePreviewTab('ph')}
                     className={`px-3 py-1 rounded-full font-bold transition-all ${
                       activePreviewTab === 'ph'
-                        ? 'bg-[#FF5A1E] text-white shadow-xs'
+                        ? 'bg-[#2563EB] text-white shadow-xs'
                         : 'text-[#1A1A1A]/70 hover:text-[#1A1A1A]'
                     }`}
                   >
@@ -242,13 +242,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                 <div className="mt-4 space-y-4">
                   <div className="p-3.5 rounded-2xl bg-[#FAF9F6] border border-[#E5E5E1] flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[#FF5A1E] text-white text-xl font-bold flex items-center justify-center shrink-0">
+                      <div className="w-12 h-12 rounded-xl bg-[#2563EB] text-white text-xl font-bold flex items-center justify-center shrink-0">
                         ⚡
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 flex-wrap">
                           <h4 className="text-sm font-bold text-[#1A1A1A]">SuperLaunch AI</h4>
-                          <span className="text-[10px] font-bold text-[#FF5A1E] bg-[#FF5A1E]/10 px-2 py-0.5 rounded-full">
+                          <span className="text-[10px] font-bold text-[#2563EB] bg-[#2563EB]/10 px-2 py-0.5 rounded-full">
                             🏆 #1 Product
                           </span>
                         </div>
@@ -262,8 +262,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                       onClick={handleUpvote}
                       className={`flex flex-col items-center justify-center px-3.5 py-2 rounded-xl border transition-all cursor-pointer ${
                         hasUpvoted
-                          ? 'border-[#FF5A1E] bg-[#FF5A1E] text-white'
-                          : 'border-[#E5E5E1] bg-white hover:border-[#FF5A1E] text-[#1A1A1A]'
+                          ? 'border-[#2563EB] bg-[#2563EB] text-white'
+                          : 'border-[#E5E5E1] bg-white hover:border-[#2563EB] text-[#1A1A1A]'
                       }`}
                     >
                       <ThumbsUp className="w-4 h-4" />
@@ -288,7 +288,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                 <div className="mt-4 p-4 rounded-2xl bg-[#1A1A1A] text-white border border-[#1A1A1A] space-y-2">
                   <div className="flex items-center justify-between text-xs">
                     <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-full bg-[#FF5A1E] text-white font-bold flex items-center justify-center text-xs">
+                      <div className="w-7 h-7 rounded-full bg-[#2563EB] text-white font-bold flex items-center justify-center text-xs">
                         S
                       </div>
                       <div>
@@ -296,12 +296,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                         <span className="text-[10px] text-white/50 ml-1">@shivam_launches</span>
                       </div>
                     </div>
-                    <span className="text-[10px] font-bold text-[#FF5A1E] bg-[#FF5A1E]/20 px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] font-bold text-[#2563EB] bg-[#2563EB]/20 px-2 py-0.5 rounded-full">
                       1.2M Views
                     </span>
                   </div>
                   <p className="text-xs text-white/80 leading-relaxed font-sans pt-1">
-                    We just took a bootstrap AI startup from 0 to <strong className="text-amber-400">#1 Product of the Day</strong> on Product Hunt + $14,000 MRR in 48 hours. Here is the 7-step blueprint: 🧵👇
+                    We just took a bootstrap AI startup from 0 to <strong className="text-blue-400">#1 Product of the Day</strong> on Product Hunt + $14,000 MRR in 48 hours. Here is the 7-step blueprint: 🧵👇
                   </p>
                 </div>
               )}
@@ -329,7 +329,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
                 </div>
                 <div className="p-2 rounded-xl bg-[#FAF9F6]">
                   <div className="text-[9px] uppercase tracking-wider text-[#1A1A1A]/50 font-bold">Top 3 Rate</div>
-                  <div className="text-sm font-bold text-[#FF5A1E]">96.2%</div>
+                  <div className="text-sm font-bold text-[#2563EB]">96.2%</div>
                 </div>
                 <div className="p-2 rounded-xl bg-[#FAF9F6]">
                   <div className="text-[9px] uppercase tracking-wider text-[#1A1A1A]/50 font-bold">Impressions</div>
@@ -352,7 +352,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAudit, onOpenBoo
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="p-5 rounded-3xl bg-white border border-[#E5E5E1] shadow-xs hover:border-[#FF5A1E] transition-all"
+              className="p-5 rounded-3xl bg-white border border-[#E5E5E1] shadow-xs hover:border-[#2563EB] transition-all"
             >
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-bold text-[#1A1A1A]/60">{stat.label}</span>

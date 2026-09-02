@@ -4,6 +4,7 @@ import { Sparkles, ArrowRight, Menu, X, Rocket, Calendar, Phone, MessageSquare, 
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { CONTACT_INFO } from '../data/portfolioData';
+import brandLogo from '../assets/images/0BB3492B-F314-44D3-BEB0-48FA1559EF8C.png';
 
 interface NavbarProps {
   onOpenAudit: () => void;
@@ -94,17 +95,22 @@ export const Navbar: React.FC<NavbarProps> = ({
             id="nav-logo"
             className="flex items-center gap-2.5 group cursor-pointer"
           >
-            <div className="w-9 h-9 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center font-bold text-sm shadow-sm group-hover:bg-[#FF5A1E] transition-colors">
-              SK
+            <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-[#2563EB]/40 p-0.5 bg-white shadow-sm group-hover:border-[#2563EB] group-hover:scale-105 transition-all flex items-center justify-center shrink-0">
+              <img
+                src={brandLogo}
+                alt="AxentAI Labs Logo"
+                className="w-full h-full object-cover rounded-full"
+                referrerPolicy="no-referrer"
+              />
             </div>
 
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
-                <span className="font-bold text-base tracking-tight text-[#1A1A1A]">
+                <span className="font-bold text-base tracking-tight text-[#1A1A1A] group-hover:text-[#2563EB] transition-colors">
                   Shivam Kushwaha
                 </span>
                 {isLegalPage && (
-                  <span className="text-[10px] font-bold text-[#FF5A1E] bg-[#FF5A1E]/10 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-bold text-[#2563EB] bg-[#2563EB]/10 px-2 py-0.5 rounded-full">
                     Legal Policy
                   </span>
                 )}
@@ -128,7 +134,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   className={`px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all ${
                     isActive
                       ? 'bg-[#1A1A1A] text-white'
-                      : 'text-[#1A1A1A]/70 hover:text-[#1A1A1A] hover:bg-slate-100/70'
+                      : 'text-[#1A1A1A]/70 hover:text-[#2563EB] hover:bg-blue-50/60'
                   }`}
                 >
                   {link.name}
@@ -144,9 +150,9 @@ export const Navbar: React.FC<NavbarProps> = ({
               variant="outline"
               size="sm"
               onClick={onOpenAudit}
-              className="text-xs text-[#1A1A1A] font-semibold border-[#E5E5E1] hover:border-[#FF5A1E] hover:text-[#FF5A1E] bg-white rounded-full px-4"
+              className="text-xs text-[#1A1A1A] font-semibold border-[#E5E5E1] hover:border-[#2563EB] hover:text-[#2563EB] bg-white rounded-full px-4"
             >
-              <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#FF5A1E]" />
+              <Sparkles className="w-3.5 h-3.5 mr-1.5 text-[#2563EB]" />
               Launch Audit
             </Button>
 
@@ -154,9 +160,9 @@ export const Navbar: React.FC<NavbarProps> = ({
               id="nav-book-btn"
               size="sm"
               onClick={onOpenBooking}
-              className="text-xs bg-[#FF5A1E] hover:bg-[#E04E1A] text-white font-bold rounded-full px-5 shadow-sm shadow-[#FF5A1E]/20"
+              className="text-xs bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold rounded-full px-5 shadow-sm shadow-[#2563EB]/20"
             >
-              <span>Contact Me</span>
+              <span>Book a Call</span>
               <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
             </Button>
           </div>
@@ -212,7 +218,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     }}
                     className="w-full justify-center rounded-full"
                   >
-                    <Sparkles className="w-4 h-4 mr-2 text-[#FF5A1E]" />
+                    <Sparkles className="w-4 h-4 mr-2 text-[#2563EB]" />
                     Free Launch Readiness Audit
                   </Button>
                   <Button
@@ -220,7 +226,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       setMobileMenuOpen(false);
                       onOpenBooking();
                     }}
-                    className="w-full justify-center bg-[#FF5A1E] hover:bg-[#E04E1A] text-white rounded-full font-bold"
+                    className="w-full justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-full font-bold"
                   >
                     <Rocket className="w-4 h-4 mr-2" />
                     Book Strategy Session

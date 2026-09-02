@@ -243,7 +243,7 @@ AxentAI Labs and Shivam Kushwaha are not liable for indirect, incidental, or thi
           </div>
 
           <div className="p-5 rounded-3xl bg-white border border-[#E5E5E1] shadow-xs">
-            <div className="w-9 h-9 rounded-xl bg-[#FF5A1E]/10 border border-[#FF5A1E]/20 text-[#FF5A1E] flex items-center justify-center mb-3">
+            <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mb-3">
               <CheckCircle2 className="w-4 h-4" />
             </div>
             <h3 className="text-sm font-bold text-[#1A1A1A]">Zero-Bot Policy</h3>
@@ -279,7 +279,7 @@ AxentAI Labs and Shivam Kushwaha are not liable for indirect, incidental, or thi
                   <a
                     key={sec.id}
                     href={`#${sec.id}`}
-                    className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#1A1A1A]/70 hover:text-[#FF5A1E] hover:bg-[#FAF9F6] transition-all"
+                    className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#1A1A1A]/70 hover:text-[#2563EB] hover:bg-[#FAF9F6] transition-all"
                   >
                     {sec.title}
                   </a>
@@ -290,7 +290,7 @@ AxentAI Labs and Shivam Kushwaha are not liable for indirect, incidental, or thi
                 <div className="text-[11px] font-bold text-[#1A1A1A] mb-1">Direct Contact</div>
                 <a 
                   href={`mailto:${CONTACT_INFO.email}`} 
-                  className="text-xs text-[#FF5A1E] font-medium hover:underline flex items-center gap-1.5"
+                  className="text-xs text-[#2563EB] font-medium hover:underline flex items-center gap-1.5"
                 >
                   <Mail className="w-3.5 h-3.5" />
                   <span>{CONTACT_INFO.email}</span>
@@ -318,7 +318,7 @@ AxentAI Labs and Shivam Kushwaha are not liable for indirect, incidental, or thi
 
             {/* Direct Contact & Inquiries Card */}
             <div className="p-6 sm:p-8 rounded-3xl bg-[#1A1A1A] text-white shadow-xl space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF5A1E]/20 text-[#FF5A1E] text-xs font-bold">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2563EB]/20 text-[#3B82F6] text-xs font-bold">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Have Questions About Our Terms?</span>
               </div>
@@ -334,7 +334,7 @@ AxentAI Labs and Shivam Kushwaha are not liable for indirect, incidental, or thi
               <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Button
                   onClick={onOpenBooking}
-                  className="bg-[#FF5A1E] hover:bg-[#E04E1A] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full"
+                  className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-bold px-6 py-2.5 rounded-full"
                 >
                   <span>Schedule Discovery Call</span>
                 </Button>

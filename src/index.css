@@ -8,19 +8,19 @@
     --card-foreground: 224 71% 4%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 71% 4%;
-    --primary: 24 95% 53%; /* Energetic launch orange #ea580c / #f97316 */
+    --primary: 221 83% 53%; /* Modern royal blue #2563eb */
     --primary-foreground: 0 0% 100%;
     --secondary: 220 14% 96%;
     --secondary-foreground: 220 30% 15%;
     --muted: 220 14% 96%;
     --muted-foreground: 220 10% 46%;
-    --accent: 38 92% 50%;
-    --accent-foreground: 24 95% 15%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 222 47% 11%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 24 95% 53%;
+    --ring: 221 83% 53%;
     --radius: 0.75rem;
   }
 }
@@ -53,13 +53,13 @@ h1, h2, h3, .font-display {
   background-size: 32px 32px;
 }
 
-/* Subtle amber/orange radiant ambient glow for decorum */
+/* Subtle azure/blue radiant ambient glow for modern white and blue aesthetic */
 .ambient-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(254, 215, 170, 0.45) 0%, rgba(255, 237, 213, 0.2) 40%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(191, 219, 254, 0.45) 0%, rgba(219, 234, 254, 0.2) 40%, transparent 70%);
 }
 
 .ambient-glow-purple {
-  background: radial-gradient(circle at 80% 20%, rgba(224, 231, 255, 0.5) 0%, rgba(243, 232, 255, 0.2) 50%, transparent 70%);
+  background: radial-gradient(circle at 80% 20%, rgba(219, 234, 254, 0.5) 0%, rgba(239, 246, 255, 0.3) 50%, transparent 70%);
 }
 
 /* Custom card highlight */

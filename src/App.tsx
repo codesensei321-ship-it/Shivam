@@ -64,7 +64,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] text-[#1A1A1A] flex flex-col selection:bg-[#FF5A1E]/20 selection:text-[#FF5A1E] font-sans">
+    <div className="min-h-screen bg-[#FAF9F6] text-[#1A1A1A] flex flex-col selection:bg-[#2563EB]/20 selection:text-[#2563EB] font-sans">
       {/* Top Navbar */}
       <Navbar
         onOpenAudit={() => setAuditOpen(true)}
