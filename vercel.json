@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/blogs", "destination": "https://rankmy.blog/blogs" },
+    { "source": "/blogs/:path*", "destination": "https://rankmy.blog/blogs/:path*" }
+  ]
+}
