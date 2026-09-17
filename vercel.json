@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/blogs", "destination": "rankmy.blog/proxy/saasexplainer.online/blogs" },
-    { "source": "/blogs/:path*", "destination": "rankmy.blog/proxy/saasexplainer.online/blogs/:path*" }
+    { "source": "/blogs", "destination": "https://rankmy.blog/proxy/saasexplainer.online/blogs" },
+    { "source": "/blogs/:path*", "destination": "https://rankmy.blog/proxy/saasexplainer.online/blogs/:path*" }
   ]
 }
